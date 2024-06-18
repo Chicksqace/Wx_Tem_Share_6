@@ -1,0 +1,15 @@
+
+<view class="container">
+  <!-- 标签切换 -->
+  <view class="tab">
+    <text class="use">已用</text>
+    <text class="cline">|</text>
+    <text class="wait">待用</text>
+    <text class="cline">|</text>
+    <text class="all">全部</text>
+  </view>
+  <!-- 订单列表 -->
+  <block wx:for="{{6}}" wx:key="{{index}}">
+  <my-order></my-order>
+  </block>
+</view>

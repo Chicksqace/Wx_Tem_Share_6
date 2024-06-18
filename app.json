@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/category/category",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/comment/comment",
+    "pages/position/position",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myorder/myorder",
+    "pages/mycom/mycom",
+    "pages/sorce/sorce",
+    "pages/feedback/feedback",
+    "pages/notice/notice",
+    "pages/set/set"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "教科商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#6C9BD2",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/home-select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "images/icon/catgory.png",
+        "selectedIconPath": "images/icon/catgory-select.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon/my.png",
+        "selectedIconPath": "images/icon/my-select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的位置，更方便为您推荐"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

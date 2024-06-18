@@ -1,0 +1,29 @@
+<import src="../template/course-item.wxml"/>
+<view class="container">
+	<!--menu-->
+	<view class="menu">
+		<block wx:for="{{categorys}}">
+			<view class="menu-item {{category_select==item.id?'selected':''}}" data-cat_id="{{item.id}}" bindtap="chooseCategory">{{item.name}}</view>
+		</block>
+	</view>
+	<!--menu_end-->
+	<!--list-->
+	<view class="cat_list_con">
+		<!-- 精品推荐 -->
+		<swiper class="adv" indicator-dots="true" autoplay="true" interval="3000" circular="true" previous-margin="20rpx" next-margin="30rpx">
+			<block wx:for="{{goods_item.images}}">
+			<swiper-item class="adv-item"><image src="{{item.img_url}}" mode="scaleToFill"></image></swiper-item>
+			</block>
+		</swiper>
+		<!-- 分类列表 -->
+		<scroll-view class="cat_list_info" scroll-y="true">
+			<!-- 列表条目 -->
+			<block wx:for="{{goods_item.list}}">
+			<view data-goods_id="{{item.id}}" bindtap="goodsInfo">
+				<template is="course-item" data="{{...item}}"></template>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	<!--list_end-->
+</view>

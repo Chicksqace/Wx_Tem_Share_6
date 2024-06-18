@@ -1,0 +1,101 @@
+<import src="../template/comment.wxml" />
+<wxs src="../../utils/cut.wxs" module="tools"></wxs>
+<view class="container">
+	<!-- 底部背景 -->
+	<view class="backgroud">
+		<image class="back-img" src="../../images/1.jpg" mode="center"></image>
+	</view>
+
+	<!-- 上浮内容 -->
+	<view class="content">
+		<!-- 图文简介 -->
+		<view class="top-info">
+			<!-- 标题 -->
+			<view class="top-title">{{good.title}}</view>
+			<!-- 评分 -->
+			<view class="start-bar">
+				<view class="start-group">
+					<view class="start-box">
+						<block wx:if="{{tools.grade(good.grade).full<=5&&tools.grade(good.grade).full>0}}">
+							<block wx:for="{{tools.grade(good.grade).full}}">
+								<image src="../../images/icon/full-start.png" mode="scaleToFill"></image>
+							</block>
+						</block>
+						<block wx:if="{{tools.grade(good.grade).last==1}}">
+							<image src="../../images/icon/half-start.png" mode="scaleToFill"></image>
+						</block>
+						<block wx:if="{{tools.grade(good.grade).gray<=5&&tools.grade(good.grade).gray>0}}">
+							<block wx:for="{{tools.grade(good.grade).gray}}">
+								<image src="../../images/icon/gray-start.png" mode="scaleToFill"></image>
+							</block>
+						</block>
+					</view>
+					<text class="start-grade">{{good.grade}}分</text>
+				</view>
+				<view class="share">
+					<button open-type="share" style="background: url(../../images/icon/share2.png);background-repeat: no-repeat;background-size:100% 3vh"></button>
+				</view>
+			</view>
+			<!-- 缩略图 -->
+			<image wx:if="{{good.move_url==''}}" class="thum" src="{{good.thum_url}}"></image>
+			<!-- 线上视屏 -->
+			<video wx:else class="thum" id="myVideo" src="{{good.move_url}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+
+			<!-- tags -->
+			<view class="tags-group">
+				<block wx:for="{{tools.split_str(good.tags,',')}}">
+					<view>{{item}}</view>
+				</block>
+			</view>
+			<view class="info-group">
+				<view class="time">上课时间：{{good.day}} {{good.star_time}}~{{good.end_time}}</view>
+				<view class="peo-num">报名人数：{{good.has_num}}/{{good.total_num}}</view>
+				<image bindtap="call" class="tel" src="../../images/icon/tel.png"></image>
+			</view>
+			<view class="address">
+				<view>授课地点：{{good.address}}<image class="position" src="../../images/icon/position.png"></image>
+				</view>
+			</view>
+		</view>
+		<!-- --------------------------- -->
+		<!-- 使用规则 -->
+		<view class="use-role">
+			<text class="use-title">使用规则</text>
+			<text class="use-con">
+          1.开课前30分钟支持退款<br/>
+          2.仅限开课当天使用<br/>
+          3.待定<br/>
+      </text>
+		</view>
+		<!-- 标签页 -->
+		<view class="tab-menu">
+
+			<view class="text {{change=='d'?'selected':''}}" data-tab="d" bindtap="changeTab" style="margin-left:20%">详情</view>
+			<view class="split">|</view>
+			<view class="text {{change=='c'?'selected':''}}" data-tab="c" bindtap="changeTab">评价</view>
+		</view>
+		<!-- 详情 -->
+		<view class="tab-info {{change=='d'?'':'hidden'}}">
+			{{good.content}}
+		</view>
+		<!-- 评价 -->
+		<view class="comments {{change=='c'?'':'hidden'}}">
+			<navigator url="../comment/comment" class="more">更多>></navigator>
+			<!-- 每一条评价 -->
+			<!-- <block wx:for="{{10}}" wx:key="{{index}}">
+				<template is="comment" />
+			</block> -->
+			<!-- 每一条评价结束 -->
+		</view>
+		<!-- ------------------------------- -->
+	</view>
+	<!-- --------------------------- -->
+	<!-- 底部按钮 -->
+	<view class="bottom">
+		<view class="price">
+			<view class="now">现价：<text class="t1">￥</text><text class="t2">30</text></view>
+			<view class="before">原价：￥30</view>
+		</view>
+		<view class="buy_btn">立刻购买</view>
+	</view>
+</view>

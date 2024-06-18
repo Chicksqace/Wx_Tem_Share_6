@@ -1,0 +1,14 @@
+<view class="contanier">
+
+	<block wx:for="{{city}}" wx:key="{{index}}">
+		<view class="box">
+			<view class="title">{{item.title}}</view>
+			<view class="list">
+				<block wx:for="{{item.lists}}" wx:key="{{index}}">
+					<view class="item" bindtap="changeCity" data-city="{{item}}">{{item}}</view>
+				</block>
+			</view>
+		</view>
+	</block>
+
+</view>

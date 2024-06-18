@@ -1,0 +1,17 @@
+.container{
+  width: 100%;
+  height: auto;
+}
+.tab{
+  width: 100%;
+  margin-bottom: 20rpx;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.use,.wait,.all,.cline{
+  padding: 5rpx 10rpx 5rpx 10rpx;
+  line-height: 5vh;
+  text-align: center;
+  margin-left: 70rpx;
+}

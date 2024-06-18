@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-order":"/components/order-list/index"
+  }
+}

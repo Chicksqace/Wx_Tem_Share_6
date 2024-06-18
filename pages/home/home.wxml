@@ -1,0 +1,91 @@
+<import src="../template/course-item.wxml" />
+<!--首页-->
+<view class="container">
+  <!-- navbar -->
+  <navbar city-name="{{cityName}}" bind:myevent="onMyevent"></navbar>
+	<!--banner-->
+	<swiper class="banner" indicator-dots='true' autoplay='true' interval='3000' circular='true'>
+		<swiper-item class="banner-item">
+			<image class="banner-img" src="../../images/1.jpg" mode="scaleToFill"></image>
+		</swiper-item>
+		<swiper-item class="banner-item">
+			<image class="banner-img" src="../../images/2.jpg" mode="scaleToFill"></image>
+		</swiper-item>
+		<swiper-item class="banner-item">
+			<image class="banner-img" src="../../images/3.jpg" mode="scaleToFill"></image>
+		</swiper-item>
+	</swiper>
+	<!--banner_end-->
+	<!--category-->
+	<view class="category">
+		<!--icon_box-->
+		<block wx:for="{{category}}">
+		<view class="icon_box" data-cat_id="{{item.id}}" bindtap="goToList">
+			<image src="{{item.icon_url}}" mode="aspectFit"></image>
+			<text>{{item.name}}</text>
+		</view>
+		</block>
+		<!--icon_box_end-->
+		
+	</view>
+	<!--category_end-->
+	<text class="clear"></text>
+	<!--course-->
+	<view class="course">
+		<!--精品课程-->
+		<view class="course-item">
+			<!--top-->
+			<image class="course-top" src="../../images/jkt.png" mode="aspectFit"></image>
+			<!--top_end-->
+			<!--list-->
+			<view class="list">
+				<!--item-->
+				<block wx:for="{{list_j}}">
+				<view data-goods_id="{{item.id}}" bindtap="goodsInfo">
+					<template is="course-item" data="{{...item}}" />
+					</view>
+				</block>
+				<!--item_end-->
+			</view>
+			<!--list_end-->
+		</view>
+		<!--精品课程_end-->
+		<!--推荐课程-->
+		<view class="course-item">
+			<!--top-->
+			<image class="course-top" src="../../images/tjk.png" mode="aspectFit"></image>
+			<!--top_end-->
+			<!--list-->
+			<view class="list">
+				<!--item-->
+				<block wx:for="{{list_t}}">
+				<view data-goods_id="{{item.id}}" bindtap="goodsInfo">
+					<template is="course-item" data="{{...item}}" />
+					</view>
+				</block>
+				<!--item_end-->
+			</view>
+			<!--list_end-->
+		</view>
+		<!--推荐课程_end-->
+		<!--热卖课程-->
+		<view class="course-item">
+			<!--top-->
+			<image class="course-top" src="../../images/rmk.png" mode="aspectFit"></image>
+			<!--top_end-->
+			<!--list-->
+			<view class="list">
+				<!--item-->
+				<block wx:for="{{list_h}}">
+				<view data-goods_id="{{item.id}}" bindtap="goodsInfo">
+					<template is="course-item" data="{{...item}}" />
+					</view>
+				</block>
+				<!--item_end-->
+			</view>
+			<!--list_end-->
+		</view>
+		<!--热卖课程_end-->
+	</view>
+	<!--course_end-->
+</view>

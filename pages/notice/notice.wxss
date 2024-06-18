@@ -1,0 +1,34 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+}
+.list{
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 20rpx;
+}
+.list-item{
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #ffffff;
+  margin-bottom: 15rpx;
+}
+.time,.title,.content{
+  margin-left: 15rpx;
+  margin-top: 8rpx;
+}
+
+.time{
+  color: #acaaaa;
+  font-size: 23rpx;
+}
+.title{
+  font-size: 30rpx;
+}
+.content{
+  font-size: 28rpx;
+  padding-bottom: 10rpx;
+}

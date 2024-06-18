@@ -1,0 +1,9 @@
+<!-- 顶部导航 -->
+<view class="nav" style="height:{{navHeight}}px;background-color:{{bgColor}}">
+  <!-- 位置 -->
+  <view class="position po_font" style="top:{{navTop*1.1}}px;left:{{navRight}}px" bindtap="position">{{cityName}}</view>
+  <image class="position po_icon" src="../images/up.png" style="top:{{navTop*1.1}}px;margin-left:{{navRight}}px" bindtap="position"></image>
+  <!--search-->
+	<input class="position search_in" style="top:{{navTop}}px;margin-left:{{navRight}}px;height:{{jnheight/1.3}}px" disabled="true" placeholder="点此搜索心怡课程" placeholder-class="search_pl" bindtap="search"></input>
+	<!--search_end-->
+</view>

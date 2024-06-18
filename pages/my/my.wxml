@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- 用户登录/信息 -->
+  <view class="user">
+    <image class="nick-icon" src="{{avatarUrl}}"></image>
+    <!-- <view class="nick-icon"></view> -->
+    <!-- <text class="nick-name"></text> -->
+    <view class="nick-name"><button open-type="getUserInfo" bindtap="{{islogin=='no'?'getUser':''}}">{{login_name}}</button></view>
+    <image bindtap="set" class="set-icon" src="../../images/icon/set.png" mode="aspectFit"></image>
+  </view>
+  <!-- 我的服务 -->
+  <view class="sevice">
+    <navigator url="/pages/myorder/myorder" class="sevice-item">
+      <image src="../../images/icon/order.png" mode="scaleToFill"></image>
+      <text>订单</text>
+    </navigator>
+
+    <navigator url="/pages/mycom/mycom" class="sevice-item">
+      <image src="../../images/icon/comment.png" mode="scaleToFill"></image>
+      <text>评价</text>
+    </navigator>
+
+    <navigator url="/pages/sorce/sorce" class="sevice-item">
+      <image src="../../images/icon/jifen.png" mode="scaleToFill"></image>
+      <text>积分</text>
+    </navigator>
+  </view>
+  <!-- 基本服务 -->
+  <view class="base_sevice">
+    <navigator url="/pages/notice/notice" class="base-item">
+      <image src="../../images/icon/notice.png" mode="aspectFit"></image>
+      <text>通知</text>
+      <view class="notice-num">2</view>
+      <view class="toj" style="margin-left:65%">></view>
+    </navigator>
+
+    <navigator url="/pages/feedback/feedback" class="base-item">
+      <image src="../../images/icon/fankui.png" mode="aspectFit"></image>
+      <text>意见反馈</text>
+      <view class="toj">></view>
+    </navigator>
+
+    <navigator bindtap="call" class="base-item">
+      <image src="../../images/icon/lianxi.png" mode="aspectFit"></image>
+      <text>联系客服</text>
+      <view class="toj">></view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+//分割字符串
+function split_str(str, flag) {
+  return str.split(flag);
+}
+//星等评价
+function grade(grade) {
+  var last = 0,
+    gray = 0,
+    temp = grade / 2;
+  //橙色图标
+  var full = parseInt(grade / 2);
+  //半个橙色图标
+  if (full < temp) {
+    last = 1
+  }
+  //灰色图标
+  gray=5-full-last;
+  var data={
+    full:full,
+    last:last,
+    gray:gray
+  }
+  return data;
+}
+module.exports = {
+  split_str: split_str,
+  grade: grade
+}

@@ -1,0 +1,37 @@
+<template name="course-item">
+	<wxs src="../../utils/cut.wxs" module="tools"></wxs>
+	<view class="info-item">
+		<image class="info-thum" src="{{thum_url}}"></image>
+		<view class="info-sum">
+			<text class="info-title">{{title}}</text>
+			<view class="stars-group">
+				<!-- <starts></starts> -->
+				<view class="starts-box">
+					<view class="starts">
+						<block wx:if="{{tools.grade(grade).full<=5&&tools.grade(grade).full>0}}">
+							<block wx:for="{{tools.grade(grade).full}}">
+								<image src="../../images/icon/full-start.png" mode="scaleToFill"></image>
+							</block>
+						</block>
+						<block wx:if="{{tools.grade(grade).last==1}}">
+							<image src="../../images/icon/half-start.png" mode="scaleToFill"></image>
+						</block>
+						<block wx:if="{{tools.grade(grade).gray<=5&&tools.grade(grade).gray>0}}">
+							<block wx:for="{{tools.grade(grade).gray}}">
+								<image src="../../images/icon/gray-start.png" mode="scaleToFill"></image>
+							</block>
+						</block>
+					</view>
+				</view>
+				<text>{{grade}}分</text>
+			</view>
+			<text class="info-age">招生年龄：{{minage}}~{{maxage}}岁</text>
+			<text class="info-addr">授课地址:{{address}}</text>
+			<view class="tags">
+				<block wx:for="{{tools.split_str(tags,',')}}">
+					<text>{{item}}</text>
+				</block>
+			</view>
+		</view>
+	</view>
+</template>

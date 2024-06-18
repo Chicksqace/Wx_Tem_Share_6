@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="name">姓名:<input type="text" value="您的昵称" /></view>
+    <view class="hr"></view>
+    <view class="concent">联系方式:<input type="text" value="18999999999" /></view>
+</view>

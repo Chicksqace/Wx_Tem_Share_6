@@ -1,0 +1,10 @@
+<import src="../template/comment.wxml" />
+<view class="container">
+  <!-- 评论列表 -->
+  <view class="comment-list">
+    <block wx:for="{{20}}">
+       <template is="comment" />
+    </block>
+  </view>
+  <view class="no-more">没有更多了</view>
+</view>

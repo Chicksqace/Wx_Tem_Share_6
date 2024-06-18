@@ -1,0 +1,26 @@
+<template name="comment">
+<view class="comment-item">
+        <!-- 评价头部 -->
+        <view class="commnet-top">
+          <image class="coment-top-left" src="../../images/icon.jpg"></image>
+          <view class="comment-top-cen">
+            <text class="nickname">一念之间</text>
+            <view class="coment-start-group">
+              <image src="../../images/icon/full-start.png"></image>
+              <image src="../../images/icon/full-start.png"></image>
+              <image src="../../images/icon/full-start.png"></image>
+              <image src="../../images/icon/full-start.png"></image>
+              <image src="../../images/icon/full-start.png"></image>
+              <text>10分</text>
+            </view>
+          </view>
+          <view class="comment-tiem">
+            2020-01-09 12:00:00 
+          </view>
+        </view>
+        <!-- 评价内容 -->
+        <view class="comment-con hidden-last">
+          fadsfadsfasdfadsfadsfasdfasdfasfdasdfjaklsdjfkladfjashjkfajksdfkjasdhlkjfahsdjkfahsdjkflhasdjkfahsdkjlfahskf11111111111111
+        </view>
+      </view>
+</template>

@@ -1,0 +1,22 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr{
+  width: 95%;
+  margin: 20rpx 2.5% 20rpx 2.5% ;
+  border-bottom: 2rpx solid #C1C1C1;
+}
+
+.name,.concent{
+  width: 95%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.concent{
+
+}

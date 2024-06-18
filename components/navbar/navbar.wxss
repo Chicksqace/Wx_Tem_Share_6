@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/*地址*/
+.position {
+  position: relative;
+  color: #ffffff;
+}
+
+.po_font {
+  font-size: 38rpx;
+  width: 16%;
+  overflow: hidden;
+  /*溢出隐藏*/
+  text-overflow: ellipsis;
+  /*以省略号...显示*/
+  white-space: nowrap;
+  /*强制不换行*/
+}
+
+.po_icon {
+  width: 3.5vh;
+  height: 3.5vh;
+}
+
+/* 搜索 */
+.search_in {
+  background-image: url(https://thumbnail0.baidupcs.com/thumbnail/4e9a37ef0p6eb00bb759cdfb786a95bc?fid=3357970592-250528-333900423825974&time=1577948400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-xHPHo%2BnA3Mi3iQHtlWPlIkYYtCg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=38172727132913255&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video);
+  /*设置小图标*/
+  background-size: 6%;
+  background-position: 0.5vh;
+  background-position-x: 5%;
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  border-radius: 20rpx;
+  width: 45%;
+  background-color: #ffffff;
+}
+
+.search_pl {
+  text-align: center;
+}

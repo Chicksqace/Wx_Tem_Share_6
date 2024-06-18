@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "教科商城--分类",
+  "usingComponents": {
+    "starts":"/components/starts/starts"
+  }
+}

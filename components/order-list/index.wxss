@@ -1,0 +1,82 @@
+.container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#F5F5F5;
+}
+/* item盒子 */
+.box{
+  width: 690rpx;
+  height: auto;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+/* 订单号，时间，状态 */
+.top{
+  display: flex;
+  flex-direction: row;
+  line-height: 5vh;
+  border-bottom: 2rpx dashed #c0c0c0;
+}
+
+.order-num,.time{
+   width:280rpx;
+   height: 5vh;
+   text-align: left;
+   font-size: 25rpx;
+   margin-left: 10rpx;
+}
+
+.status{
+  width: 80rpx;
+  font-size: 25rpx;
+  text-align: right;
+}
+/* 订单简信 */
+.info{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.img{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+} 
+/* 中间 */
+.middle{
+  width: 480rpx;
+}
+.title{
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.mtext{
+  font-size: 25rpx;
+}
+.buy-num{
+  font-size: 25rpx;
+}      
+/* 右边 */
+.comment{
+  width: 90rpx;
+  height: 42rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  border:2rpx solid #cecece;
+  font-size: 23rpx;
+  line-height: 42rpx;
+  color: #333333;
+  margin-top: 20rpx;
+}
